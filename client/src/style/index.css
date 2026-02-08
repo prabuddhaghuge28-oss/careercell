@@ -1,0 +1,421 @@
+/* tailwind css  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dancing {
+  font-family: "Dancing Script", cursive;
+}
+
+.playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #F4F6F9;
+}
+
+/* custom sidebar scroll bar  */
+
+/* Initially hide the scrollbar */
+.sidebar-nav::-webkit-scrollbar {
+  width: 0;
+  /* Set width to 0 to hide the scrollbar */
+  height: 0;
+  /* For horizontal scrollbar, if any */
+}
+
+/* On hover or scroll, show the scrollbar */
+.sidebar-nav:hover::-webkit-scrollbar {
+  width: 4px;
+  /* Adjust the width when visible */
+  height: 4px;
+  /* For horizontal scrollbar, if any */
+}
+
+/* Track */
+.sidebar-nav::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* custom sidebar scroll bar  */
+
+
+/* input type number disable arrow  */
+/* Hide the arrows for number input in Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide the arrows for number input in Firefox */
+/* input[type=number] {
+  -moz-appearance: textfield;
+} */
+
+/* input type number disable arrow  */
+
+
+/* Sidebar content remains visible */
+.sidebar-content {
+  scrollbar-width: none;
+  /* For Firefox */
+}
+
+.sidebar-content::-webkit-scrollbar {
+  width: 0;
+  /* For Webkit (Chrome, Safari) */
+  transition: width 0.3s ease;
+  /* Add transition for smooth scrollbar visibility */
+}
+
+/* Show scrollbar only on hover */
+.navbar-container:hover .sidebar-content::-webkit-scrollbar {
+  width: 8px;
+  /* Show the scrollbar when hovered */
+}
+
+.navbar-container:hover .sidebar-content {
+  scrollbar-width: thin;
+  /* Show scrollbar for Firefox on hover */
+}
+
+/* Customize scrollbar thumb */
+.sidebar-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Scrollbar color */
+  border-radius: 10px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Darker scrollbar color on hover */
+}
+
+/* Design system using Tailwind layers */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    background: #d9ebff;
+    color: #0f3779;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 active:scale-[0.99];
+  }
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 shadow-soft hover:shadow-softLg;
+  }
+  .btn-outline {
+    @apply btn border border-primary-300 text-primary-700 bg-surface hover:bg-primary-50;
+  }
+  .btn-ghost {
+    @apply btn text-primary-700 hover:bg-primary-50;
+  }
+
+  .card {
+    @apply bg-surface border border-primary-100 rounded-2xl shadow-soft;
+  }
+  .card-hover {
+    @apply transition-all hover:shadow-softLg hover:-translate-y-0.5;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-primary-200 bg-surface px-3 py-2 text-primary-900 placeholder-primary-400 outline-none ring-0 focus:border-primary-400 focus:ring-2 focus:ring-primary-100 transition;
+  }
+  .label {
+    @apply text-sm text-primary-700 mb-1;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full bg-primary-50 text-primary-700 px-2.5 py-1 text-xs font-medium border border-primary-100;
+  }
+
+  .section {
+    @apply py-10 md:py-14;
+  }
+  .glass {
+    @apply bg-white/50 backdrop-blur border border-white/60;
+  }
+  .hover-lift {
+    @apply transition-transform duration-200 ease-out hover:-translate-y-0.5;
+  }
+}
+/* tailwind css  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.dancing {
+  font-family: "Dancing Script", cursive;
+}
+
+.playfair {
+  font-family: "Playfair Display", serif;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #F4F6F9;
+}
+
+/* custom sidebar scroll bar  */
+
+/* Initially hide the scrollbar */
+.sidebar-nav::-webkit-scrollbar {
+  width: 0;
+  /* Set width to 0 to hide the scrollbar */
+  height: 0;
+  /* For horizontal scrollbar, if any */
+}
+
+/* On hover or scroll, show the scrollbar */
+.sidebar-nav:hover::-webkit-scrollbar {
+  width: 4px;
+  /* Adjust the width when visible */
+  height: 4px;
+  /* For horizontal scrollbar, if any */
+}
+
+/* Track */
+.sidebar-nav::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Handle */
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* custom sidebar scroll bar  */
+
+
+/* input type number disable arrow  */
+/* Hide the arrows for number input in Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide the arrows for number input in Firefox */
+/* input[type=number] {
+  -moz-appearance: textfield;
+} */
+
+/* input type number disable arrow  */
+
+
+/* Sidebar content remains visible */
+.sidebar-content {
+  scrollbar-width: none;
+  /* For Firefox */
+}
+
+.sidebar-content::-webkit-scrollbar {
+  width: 0;
+  /* For Webkit (Chrome, Safari) */
+  transition: width 0.3s ease;
+  /* Add transition for smooth scrollbar visibility */
+}
+
+/* Show scrollbar only on hover */
+.navbar-container:hover .sidebar-content::-webkit-scrollbar {
+  width: 8px;
+  /* Show the scrollbar when hovered */
+}
+
+.navbar-container:hover .sidebar-content {
+  scrollbar-width: thin;
+  /* Show scrollbar for Firefox on hover */
+}
+
+/* Customize scrollbar thumb */
+.sidebar-content::-webkit-scrollbar-thumb {
+  background-color: #888;
+  /* Scrollbar color */
+  border-radius: 10px;
+}
+
+.sidebar-content::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+  /* Darker scrollbar color on hover */
+}
+
+/* Design system using Tailwind layers */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    background: #d9ebff;
+    color: #0f3779;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 active:scale-[0.99];
+  }
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 shadow-soft hover:shadow-softLg;
+  }
+  .btn-outline {
+    @apply btn border border-primary-300 text-primary-700 bg-surface hover:bg-primary-50;
+  }
+  .btn-ghost {
+    @apply btn text-primary-700 hover:bg-primary-50;
+  }
+
+  .card {
+    @apply bg-surface border border-primary-100 rounded-2xl shadow-soft;
+  }
+  .card-hover {
+    @apply transition-all hover:shadow-softLg hover:-translate-y-0.5;
+  }
+
+  /* Animation utility helpers */
+  .animate-fade-up {
+    @apply animate-fadeInUp;
+  }
+  .animate-fade {
+    @apply animate-fadeIn;
+  }
+  .animate-slide {
+    @apply animate-slideIn;
+  }
+
+  /* Enhanced button look */
+  .btn-primary {
+    @apply btn bg-gradient-to-r from-primary-600 to-primary-500 text-white shadow-soft hover:from-primary-700 hover:to-primary-600;
+  }
+  .btn-outline {
+    @apply btn border border-primary-300 text-primary-700 bg-white hover:bg-primary-50;
+  }
+
+  /* Polished card */
+  .card {
+    @apply bg-white border border-primary-50 rounded-2xl shadow-soft p-4;
+  }
+
+  /* Modal / Bootstrap overrides (lightweight) */
+  .modal-content {
+    @apply rounded-2xl border border-primary-100 shadow-soft p-0 overflow-hidden;
+  }
+  .modal-header {
+    @apply bg-white border-b border-primary-100 px-6 py-4 items-center;
+  }
+  .modal-title {
+    @apply text-lg font-semibold text-primary-800;
+  }
+  .modal-body {
+    @apply px-6 py-4 text-primary-700;
+  }
+  .modal-footer {
+    @apply px-6 py-4 border-t border-primary-100 bg-surface/60;
+  }
+
+  /* Toast overrides */
+  .toast {
+    @apply bg-white border border-primary-100 text-primary-800 shadow-soft rounded-lg;
+  }
+  .toast-header {
+    @apply bg-white border-b border-primary-50 text-primary-700 px-3 py-2;
+  }
+  .toast-body {
+    @apply px-3 py-2 text-primary-800;
+  }
+
+  /* Common UI patterns */
+  .brand {
+    @apply text-primary-700 font-extrabold tracking-tight text-xl md:text-2xl;
+  }
+  .subtle {
+    @apply text-primary-500;
+  }
+
+
+@layer utilities {
+  .glow {
+    box-shadow: 0 6px 24px rgba(47, 128, 255, 0.12);
+  }
+  .shimmer {
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1500ms linear infinite;
+  }
+  @keyframes shimmer {
+    0% { background-position: -150% 0; }
+    100% { background-position: 150% 0; }
+  }
+}
+  .input {
+    @apply w-full rounded-lg border border-primary-200 bg-surface px-3 py-2 text-primary-900 placeholder-primary-400 outline-none ring-0 focus:border-primary-400 focus:ring-2 focus:ring-primary-100 transition;
+  }
+  .label {
+    @apply text-sm text-primary-700 mb-1;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full bg-primary-50 text-primary-700 px-2.5 py-1 text-xs font-medium border border-primary-100;
+  }
+
+  .section {
+    @apply py-10 md:py-14;
+  }
+  .glass {
+    @apply bg-white/50 backdrop-blur border border-white/60;
+  }
+  .hover-lift {
+    @apply transition-transform duration-200 ease-out hover:-translate-y-0.5;
+  }
+}
