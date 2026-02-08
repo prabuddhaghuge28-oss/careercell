@@ -30,6 +30,18 @@ app.use('/api/v1/management', require('./routes/management.route'));
 // route for company
 app.use('/api/v1/company', require('./routes/company.route'));
 
+// Serve client build for all other routes
+const clientBuildPath = path.join(__dirname, '../client/dist');
+app.use(express.static(clientBuildPath));
+
+app.get('*', (req, res) => {
+  // Only serve index.html for non-API routes
+  if (!req.path.startsWith('/api/')) {
+    res.sendFile(path.join(clientBuildPath, 'index.html'));
+  } else {
+    res.status(404).json({ message: 'Not Found' });
+  }
+});
 
 // Start the server
 const PORT = process.env.PORT;

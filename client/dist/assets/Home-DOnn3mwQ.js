@@ -1,0 +1,1 @@
+import{j as r}from"./index-F5vbwB_e.js";import{N as e}from"./NoticeBox-DLmPVVyu.js";import"./Badge-XAqEXOkL.js";import"./ThemeProvider-nWUV6F1R.js";function a(){return document.title="CareerCell | TPO Dashboard",r.jsx(r.Fragment,{children:r.jsx("div",{className:"grid grid-cols-1 gap-2",children:r.jsx(e,{})})})}export{a as default};
